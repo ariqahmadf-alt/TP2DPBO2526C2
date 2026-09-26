@@ -111,9 +111,6 @@ classDiagram
     Film <|-- FilmAnimasi
 ```
 
-> Catatan: atribut `foto_produk` pada class `Film` hanya ada di implementasi PHP,
-> sesuai requirement TP2 (khusus bahasa PHP).
-
 ## Cara Menjalankan / Kompilasi
 
 Perintah kompilasinya sama di semua OS. Yang beda cuma cara **memanggil hasil compile**
@@ -133,9 +130,6 @@ Jalankan:
 | Windows (CMD) | `awawa` atau `awawa.exe` |
 | Mac / Linux | `./awawa` |
 
-> Di Windows, `./awawa` **tidak akan jalan** ("is not recognized..."), karena `./` itu sintaks
-> Linux/Mac. Cukup ketik `awawa` saja.
-
 ### Java
 
 Compile & jalankan (sama persis di semua OS):
@@ -153,17 +147,6 @@ Jalankan:
 | Windows | `python main.py` |
 | Mac / Linux | `python3 main.py` |
 
-> Di Windows, `python3` sering memicu pesan "Python was not found; run without arguments to
-> install from the Microsoft Store..." meskipun Python sudah terinstall. Solusinya:
-> 1. Kalau Python memang belum terinstall, download dari https://www.python.org/downloads/
->    (bukan dari Microsoft Store) dan centang **"Add python.exe to PATH"** saat instalasi.
-> 2. Kalau sudah terinstall tapi masih muncul pesan itu, matikan alias-nya di
->    **Settings -> Apps -> Advanced app settings -> App execution aliases**, matikan toggle
->    **App Installer python.exe / python3.exe**, lalu buka CMD baru.
->
-> Di Mac/Linux biasanya `python` mengarah ke Python 2 (atau tidak ada sama sekali), jadi harus
-> pakai `python3`.
-
 ### PHP
 
 Harus lewat server, tidak bisa dibuka langsung dari file (perintahnya sama di semua OS,
@@ -173,12 +156,6 @@ cd PHP
 php -S localhost:8000
 ```
 lalu buka `http://localhost:8000/index.php` di browser.
-
-> Folder `posters/` di dalam folder `PHP` berisi file gambar poster untuk kelima film
-> (nama file harus sama persis dengan nilai atribut `foto_produk` masing-masing objek,
-> lihat tabel di `index.php`). Ganti isi file-file di folder itu dengan poster asli
-> kalau mau (tetap pakai nama file yang sama), atau tambah objek baru + poster baru
-> sesuai kebutuhan.
 
 ### Menjalankan dengan Testcase
 
@@ -192,10 +169,6 @@ mentah (tanpa komentar), urutannya: pilih menu Tambah (1) -> isi 9 field data fi
 | C++ | `awawa < testcase_cpp.txt` | `./awawa < testcase_cpp.txt` |
 | Java | `java Main < testcase_java.txt` | `java Main < testcase_java.txt` |
 | Python | `python main.py < testcase_python.txt` | `python3 main.py < testcase_python.txt` |
-
-> Testcase ini untuk kebutuhan verifikasi cepat saja. Untuk dokumentasi (screenshot/screenrecord),
-> sebaiknya isi datanya manual lewat terminal, bukan pakai redirect file, supaya kelihatan program
-> beneran dijalankan interaktif.
 
 ## Flow Programnya
 
@@ -225,15 +198,6 @@ Untuk versi PHP (web):
   `foto_produk` yang isinya nama file gambar di folder `posters/`.
 
 ## Dokumentasi
-
-Taruh file screenshot/screen record di masing-masing folder `Dokumentasi/<Bahasa>/` dengan
-nama persis seperti di bawah, supaya link gambarnya otomatis kebaca:
-
-- `run+add.png` -> proses compile/run program lalu input Tambah Data secara manual di terminal
-  (dipakai C++, Java, Python)
-- `tampil.png` -> hasil tabel setelah pilih menu Tampilkan Data (dipakai C++, Java, Python, dan PHP)
-- `run.png` -> khusus PHP, screenshot server PHP jalan / halaman awal di browser (PHP tidak punya
-  fitur Tambah Data, jadi tidak ada `run+add.png`, cuma `run.png` + `tampil.png`)
 
 ### C++
 
